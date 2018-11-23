@@ -13,7 +13,7 @@
         </style>
     </head>
     <body>
-        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="static/babylon.js"></script>
         <canvas id="render-canvas"><</canvas>
         <script>
 
@@ -41,7 +41,8 @@
             box.rotation.y = -Math.PI / 2;
             box.rotation.z = 0.0;
             
-            var ws = new WebSocket("ws://192.168.0.143:8765/");
+            //var ws = new WebSocket("ws://127.0.0.1:8765/");
+            var ws = new WebSocket("ws://192.168.43.1:8765")
             var orientation;
 
             ws.onmessage = function(event) {
