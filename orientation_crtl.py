@@ -1,7 +1,7 @@
 import asyncio
 import json
 import websockets
-from androidhelper import androidhelper
+from androidhelper import Android
 
 droid = Android()
 droid.startSensingTimed(1, 150)
@@ -10,7 +10,8 @@ async def get_oriention(websocket, path):
 
     while True:
 
-        orientation_result = droid.sensorReadOrientation().orientation_result
+        #orientation_result = droid.sensorsReadOrientation().orientation_result
+        orientation_result = droid.sensorsReadOrientation().result
         orientation_json = json.dumps(
             {
                 "azimuth": '%.4f' % orientation_result[0],
