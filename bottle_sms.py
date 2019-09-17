@@ -9,7 +9,7 @@ app = Bottle()
 droid = androidhelper.Android()
 
 
-@app.route("/"):
+@app.route("/")
 def index():
 
     return "Hello World"

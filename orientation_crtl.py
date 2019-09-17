@@ -3,6 +3,7 @@ import json
 import websockets
 from androidhelper import Android
 
+
 droid = Android()
 droid.startSensingTimed(1, 150)
 
